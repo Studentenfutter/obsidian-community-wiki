@@ -32,18 +32,18 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
+            ${{ runner.os }}-pip-
+            ${{ runner.os }}-
 
       - name: Deploy to Github pages
-        env: # Or as an environment variable
-          ENCRYPTCONTENT_PASSWORD: ${{ secrets.ENCRYPTCONTENT_PASSWORD }}
         run: mkdocs gh-deploy --force
 
-  build:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Build the "slim" image
-        run: |
-          docker build -t dac:slim -f dockerfiles/slim/Dockerfile .
+#  build:
+#    runs-on: ubuntu-18.04
+#    steps:
+#     - name: Checkout
+#        uses: actions/checkout@v2
+#
+#      - name: Build the "slim" image
+#        run: |
+#          docker build -t dac:slim -f dockerfiles/slim/Dockerfile .
