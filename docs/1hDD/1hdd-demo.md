@@ -1,14 +1,4 @@
-# 1h Demo
-
-Schön dass ihr alle da seid!
-
-```bash
-mkdocs serve
-```
+# Demo
 
 !!! warning
-    Test page
-    
-# Produktivumgebung
-
-Editierung ist einfach aus dem browser möglich!
+    Encrypted test page
