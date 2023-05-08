@@ -46,7 +46,7 @@ plugins:
   - awesome-pages
   - obsidian-support
   - encryptcontent:
-        use_secret: '$ENCRYPTCONTENT_PASSWORD'
+        use_secret: 'ENCRYPTCONTENT_PASSWORD'
   - autolinks
   - git-revision-date-localized:
     # This plugin needs a Git executable and the .git folder
