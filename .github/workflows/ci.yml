@@ -27,12 +27,15 @@ jobs:
 
       - uses: actions/cache@v3
         with:
+          ENCRYPTCONTENT_PASSWORD: ${{ secrets.ENCRYPTCONTENT_PASSWORD }}
           key: mkdocs-material-${{ github.ref }} 
           path: .cache
           restore-keys: |
             mkdocs-material-
 
       - name: Deploy to Github pages
+        env: # Or as an environment variable
+          ENCRYPTCONTENT_PASSWORD: ${{ secrets.ENCRYPTCONTENT_PASSWORD }}
         run: mkdocs gh-deploy --force
 
   build:
