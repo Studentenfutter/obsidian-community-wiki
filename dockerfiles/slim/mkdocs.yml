@@ -44,6 +44,9 @@ plugins:
       lang: de
       separator: '[\s]'
   - awesome-pages
+  - obsidian-support
+  - encryptcontent:
+        use_secret: '$ENCRYPTCONTENT_PASSWORD'
   - autolinks
   - git-revision-date-localized:
     # This plugin needs a Git executable and the .git folder
@@ -85,12 +88,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-repo_url: https://github.com/TimGrt/DaC-Template
-repo_name: timgrt/dac-template
+repo_url: https://github.com/Studentenfutter/obsidian-community-wiki
+repo_name: Studentenfutter/obsidian-community-wiki
 # Navigation definition
 nav:
   - "Home": index.md
-  - "1hDD": 1hDD/1hdd-demo.md
   - "MkDocs":
     - mkdocs/mkdocs-informationen.md
     - mkdocs/mkdocs-elemente.md
